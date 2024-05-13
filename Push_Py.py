@@ -94,17 +94,14 @@ while(i < len(PlayListRatings) and Rating >= 6):
 squares = ['orange', 'orange', 'purple', 'blue ', 'orange']
 new_squares = []
 i = 0
-while(i < len(squares) and squares[i] == 'orange'):
+while(i < len(squares) and squares[i] == 
     new_squares.append(squares[i])
     i = i + 1
 print (new_squares)
 
 """
 """
-def mult(a,b):
- 
-    c = a*b;
-    return c
+
 
 print(mult(5,"Ador"))
 """
@@ -116,17 +113,16 @@ def cat(*names):
 cat("Ador","Bhuna")
 """
 """
-#Global Scope
+Global Scope
 
 def thriller():
     date = 1982
     return (date)
-
+###
 #Global Scope
 date = 2017 #Global Variable
 
 #Calling variable from local scope
-print(thriller())
 
 #Calling variable from global scope
 print(date)
@@ -491,7 +487,5 @@ car2.accelerate(20)
 # Print the current speeds of the cars
 #print(f"{car1.make} {car1.model} is currently at {car1.get_speed()} km/h.")
 #print(f"{car2.make} {car2.model} is currently at {car2.get_speed()} km/h.")
-
-print(car2.speed)
 
 
