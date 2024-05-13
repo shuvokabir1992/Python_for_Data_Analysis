@@ -13,7 +13,6 @@ for i in colors:
 for i in range(1,6):
     print(i)
 """
-"""
 colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 
 for i in colors:
