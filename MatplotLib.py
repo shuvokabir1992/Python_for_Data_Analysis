@@ -66,6 +66,8 @@ fig.colorbar(im)
 
 plt.show()
 '''
+
+
 for param in ['RAM_GB','CPU_frequency','Storage_GB_SSD','Screen_Size_inch','Weight_pounds','CPU_core','OS','GPU','Category']:
     
     pearson_coef, p_value = stats.pearsonr(df[param],df['Price'])
