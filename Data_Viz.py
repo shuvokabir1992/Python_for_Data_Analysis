@@ -91,6 +91,49 @@ print(df_can.iloc[87, [3, 4, 5, 6, 7, 8]])
 #2. For year 2000
 #3. For years 1990 to 1995
 
-#Task 1
+print(df_can.loc['Haiti'])
+print(df_can.loc['Haiti',2000])
+print(df_can.loc['Haiti',[1990,1991,1992,1993,1994,1995]])
 
-print()
+#let's convert the column names into strings: '1980' to '2013'.
+df_can.columns = list(map(str, df_can.columns))
+
+#years = list(map(str, range(1980, 2014)))
+#print(years)
+
+years = list(map(str, range(1990, 2014)))
+print(df_can.loc['Haiti',years])
+
+#Filtering based on a criteria
+
+# 1. create the condition boolean series
+condition = df_can['Continent'] == 'Asia'
+#print(condition)
+
+# 2. pass this condition into the dataFrame
+print(df_can[condition])
+
+# let's filter for AreaNAme = Asia and RegName = Southern Asia
+
+print(df_can[(df_can['Continent'] == 'Asia') & (df_can['Region'] == 'Southern Asia')])
+
+print(df_can[(df_can['Continent'] == 'Africa') & (df_can['Region'] == 'Southern Africa')])
+
+#Format for applying 2 or more condition
+#df[(df['Col1'] == 'Condition1') & (df['Col2'] == 'Condition2')]
+#df[(df[''] == '') & (df[''] == '')]
+
+#Sorting Values of a Dataframe or Series
+
+df_can.sort_values(by = 'Total', ascending=False,axis=0,inplace=True)
+
+print(df_can.head(5))
+
+
+
+
+#Find out top 3 countries that contributes the most to immigration to Canda in the year 2010.
+
+df_can.sort_values(by = '2010', ascending=False, axis = 0, inplace=True)
+
+print(df_can['2010'].head(3))
